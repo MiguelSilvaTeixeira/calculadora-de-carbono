@@ -1,3 +1,5 @@
+from funcoes import CalcularPegadaCarbono
+
 def Main():
     # Loop principal para permitir múltiplos cálculos
     while True:
@@ -79,7 +81,11 @@ def Main():
             }
             # Define as opções de projeto de compensação disponíveis
             opcoesProjeto = ["florestamento", "energia_renovavel", "eficiencia_energetica", "projetos_sociais"]
-            
+        
+        # Calcular a pegada de carbono total com base nos dados fornecidos
+        pegadaCarbono = CalcularPegadaCarbono(dadosAtividade)
+        print(f"\nSua pegada de carbono mensal é: {pegadaCarbono:.2f} kg de CO2")
+
         # TODO: Implementar funcionalidades adicionais aqui.
 
 # Executa o programa principal
