@@ -61,6 +61,25 @@ def Main():
             # Define as opções de projeto de compensação disponíveis
             opcoesProjeto = ["florestamento", "energia_renovavel", "eficiencia_energetica", "projetos_sociais"]
         
+        # Condicional para a opção "Cidade"
+        elif tipoUsuario == "3":
+            print("\nVocê escolheu: Cidade")
+            # Coleta dados de consumo específicos para cidades
+            consumoEletricidade = float(input("Consumo mensal de eletricidade (MWh): ")) * 1000  # Converte para kWh
+            consumoGasolina = float(input("Consumo mensal de gasolina (litros): "))
+            transportePublico = float(input("Distância total percorrida por transporte público por mês (km): "))
+            residuosSolidos = float(input("Quantidade total de resíduos sólidos gerados por mês (toneladas): ")) * 1000  # Converte para kg
+
+            # Armazena os dados em um dicionário
+            dadosAtividade = {
+                "eletricidade": consumoEletricidade,
+                "gasolina": consumoGasolina,
+                "transporte_publico": transportePublico,
+                "residuos_solidos": residuosSolidos
+            }
+            # Define as opções de projeto de compensação disponíveis
+            opcoesProjeto = ["florestamento", "energia_renovavel", "eficiencia_energetica", "projetos_sociais"]
+            
         # TODO: Implementar funcionalidades adicionais aqui.
 
 # Executa o programa principal
