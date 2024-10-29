@@ -41,7 +41,7 @@ def Main():
             }
             # Define as opções de projeto de compensação disponíveis
             opcoesProjeto = ["florestamento", "energia_renovavel", "eficiencia_energetica"]
-        
+
         # Condicional para a opção "Empresa"
         elif tipoUsuario == "2":
             print("\nVocê escolheu: Empresa")
@@ -62,7 +62,7 @@ def Main():
             }
             # Define as opções de projeto de compensação disponíveis
             opcoesProjeto = ["florestamento", "energia_renovavel", "eficiencia_energetica", "projetos_sociais"]
-        
+
         # Condicional para a opção "Cidade"
         elif tipoUsuario == "3":
             print("\nVocê escolheu: Cidade")
@@ -81,10 +81,26 @@ def Main():
             }
             # Define as opções de projeto de compensação disponíveis
             opcoesProjeto = ["florestamento", "energia_renovavel", "eficiencia_energetica", "projetos_sociais"]
-        
+
         # Calcular a pegada de carbono total com base nos dados fornecidos
         pegadaCarbono = CalcularPegadaCarbono(dadosAtividade)
         print(f"\nSua pegada de carbono mensal é: {pegadaCarbono:.2f} kg de CO2")
+
+        # Escolher o tipo de projeto de compensação
+        while True:
+            print("\nEscolha o tipo de projeto para compensar suas emissões:")
+            # Exibe as opções de projetos disponíveis
+            for i, projeto in enumerate(opcoesProjeto, 1):
+                print(f"{i}. {projeto.replace("_", " ").capitalize()}")
+            escolhaProjeto = input("Digite o número correspondente à sua escolha: ")
+
+            # Verifica se a escolha do projeto é válida
+            try:
+                tipoProjeto = opcoesProjeto[int(escolhaProjeto) - 1]
+                break
+            except (IndexError, ValueError):
+                # Se a escolha for inválida, pede a entrada novamente
+                print("Escolha inválida. Por favor, tente novamente.\n")
 
         # TODO: Implementar funcionalidades adicionais aqui.
 
