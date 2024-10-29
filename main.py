@@ -105,6 +105,12 @@ def Main():
         # Calcular o custo de compensação em USD, BRL e o crédito de carbono necessário
         custoUsd, custoBrl, creditosCarbono = CalcularCustoCompensacao(pegadaCarbono, tipoProjeto)
 
+        # Exibe informações sobre o custo para neutralizar as emissões.
+        print(f"\nO custo para neutralizar suas emissões através de {tipoProjeto.replace("_", " ")} é:")
+        print(f"- ${custoUsd:.2f} USD")
+        print(f"- R${custoBrl:.2f}".replace(".", ","), "BRL")
+        print(f"Será necessário adquirir {creditosCarbono:.2f} crédito(s) de carbono para compensar {pegadaCarbono:.2f} kg de CO2.")
+        
         # TODO: Implementar funcionalidades adicionais aqui.
 
 # Executa o programa principal
