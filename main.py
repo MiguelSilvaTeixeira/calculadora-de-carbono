@@ -110,8 +110,12 @@ def Main():
         print(f"- ${custoUsd:.2f} USD")
         print(f"- R${custoBrl:.2f}".replace(".", ","), "BRL")
         print(f"Será necessário adquirir {creditosCarbono:.2f} crédito(s) de carbono para compensar {pegadaCarbono:.2f} kg de CO2.")
-        
-        # TODO: Implementar funcionalidades adicionais aqui.
+
+        # Perguntar ao usuário se deseja realizar outro cálculo
+        rodarNovamente = input("\nVocê gostaria de calcular novamente? (sim/não): ").strip().lower()
+        if rodarNovamente.lower() != "sim":
+            print("Obrigado por utilizar a Calculadora de Créditos de Carbono!")
+            break        
 
 # Executa o programa principal
 if __name__ == "__main__":
