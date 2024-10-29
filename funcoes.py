@@ -9,4 +9,12 @@ fatoresEmissao = {
     "residuos_solidos": 1.42      # kg CO2 por kg de resíduos sólidos (média)
 }
 
+# Preço dos créditos de carbono em USD por tonelada de CO2
+precosCreditos = {
+    "florestamento": 10,
+    "energia_renovavel": 15,
+    "eficiencia_energetica": 12,
+    "projetos_sociais": 20
+}
+
 # TODO: Implementar funcionalidades adicionais aqui.
