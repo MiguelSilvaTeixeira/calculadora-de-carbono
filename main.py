@@ -1,4 +1,4 @@
-from funcoes import CalcularPegadaCarbono
+from funcoes import CalcularPegadaCarbono, CalcularCustoCompensacao
 
 def Main():
     # Loop principal para permitir múltiplos cálculos
@@ -101,6 +101,9 @@ def Main():
             except (IndexError, ValueError):
                 # Se a escolha for inválida, pede a entrada novamente
                 print("Escolha inválida. Por favor, tente novamente.\n")
+
+        # Calcular o custo de compensação em USD, BRL e o crédito de carbono necessário
+        custoUsd, custoBrl, creditosCarbono = CalcularCustoCompensacao(pegadaCarbono, tipoProjeto)
 
         # TODO: Implementar funcionalidades adicionais aqui.
 
