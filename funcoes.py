@@ -17,4 +17,7 @@ precosCreditos = {
     "projetos_sociais": 20
 }
 
+# Taxa de câmbio USD para BRL
+taxaCambioUsdBrl = 5.50  # 1 USD = 5,50 BRL
+
 # TODO: Implementar funcionalidades adicionais aqui.
