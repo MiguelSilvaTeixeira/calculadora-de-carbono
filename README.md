@@ -16,3 +16,38 @@ O desenvolvimento deste projeto exigirá que os alunos apliquem os conhecimentos
 Ao final do projeto, os alunos terão desenvolvido uma ferramenta prática e útil para a tomada de decisões mais sustentáveis.
 
 ---
+
+## Pré-requisitos
+
+Para rodar a Calculadora de Créditos de Carbono, você precisa ter instalado o Python (versão 3.6 ou superior) no seu sistema. Além disso, os arquivos do projeto `main.py` e `funcoes.py` devem estar localizados no mesmo diretório.
+
+### Instalação do Python
+
+1. **Download do Python**: Acesse o site oficial do Python (https://www.python.org/downloads/) e faça o download da versão mais recente.
+2. **Instalação**: Siga as instruções de instalação específicas para o seu sistema operacional (Windows, macOS ou Linux).
+
+### Estrutura de Arquivos
+
+O diretório do projeto deve ter a seguinte estrutura:
+
+```
+calculadora-de-carbono/
+├── main.py
+└── funcoes.py
+```
+
+## Como Rodar a Calculadora
+
+Para executar a calculadora, siga as seguintes instruções:
+
+1. Abra o **Prompt de Comando**.
+
+2. Navegue até o diretório onde os arquivos estão localizados. Exemplo:
+   cd C:\caminho\para\calculadora-de-carbono
+
+3. Execute o seguinte comando:
+   python main.py
+
+Isso iniciará o programa e você poderá interagir com a calculadora de créditos de carbono.
+
+---
