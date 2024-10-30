@@ -33,4 +33,17 @@ def CalcularPegadaCarbono(dadosAtividade):
     # Retorna a pegada de carbono total em kg de CO2
     return pegadaTotal
 
-# TODO: Implementar funcionalidades adicionais aqui.
+# Função para calcular o custo de compensação em USD e BRL
+def CalcularCustoCompensacao(pegadaCarbono, tipoProjeto):
+    # Converte a pegada de carbono de kg para toneladas
+    toneladasCo2 = pegadaCarbono / 1000
+    # Obtém o preço do crédito de carbono para o tipo de projeto escolhido
+    precoCreditoUsd = precosCreditos.get(tipoProjeto, 0)
+    # Calcula o custo em USD para compensar a pegada de carbono
+    custoUsd = toneladasCo2 * precoCreditoUsd
+    # Converte o custo em USD para BRL usando a taxa de câmbio
+    custoBrl = custoUsd * taxaCambioUsdBrl
+    # Calcula a quantidade de créditos de carbono
+    creditosCarbono = toneladasCo2
+    # Retorna o custo em USD, BRL e a quantidade de créditos de carbono
+    return custoUsd, custoBrl, creditosCarbono
