@@ -20,4 +20,17 @@ precosCreditos = {
 # Taxa de câmbio USD para BRL
 taxaCambioUsdBrl = 5.50  # 1 USD = 5,50 BRL
 
+# Função para calcular a pegada de carbono
+def CalcularPegadaCarbono(dadosAtividade):
+    # Inicializa a pegada de carbono total como zero
+    pegadaTotal = 0
+    # Itera sobre cada atividade e seu valor de consumo
+    for atividade, valor in dadosAtividade.items():
+        # Obtém o fator de emissão correspondente à atividade
+        fator = fatoresEmissao.get(atividade, 0)
+        # Calcula a emissão para a atividade e soma ao total
+        pegadaTotal += valor * fator
+    # Retorna a pegada de carbono total em kg de CO2
+    return pegadaTotal
+
 # TODO: Implementar funcionalidades adicionais aqui.
